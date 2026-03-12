@@ -14,9 +14,9 @@ public class ContactDAO {
             System.out.println("No contacts yet.");
             return;
         }
-        for (String c : contacts) {
-            String[] parts = c.split("\\|");
-            System.out.println(parts[0] + " - " + parts[1]);
+        for (int i = 0; i < contacts.size(); i++) {
+            String[] parts = contacts.get(i).split("\\|");
+            System.out.println((i + 1) + ". " + parts[0] + " - " + parts[1]);
         }
     }
 
